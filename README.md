@@ -8,6 +8,20 @@
 **Status:** Functional prototype, tested with synthetic customer and property data  
 **Industry:** Real Estate
 
+## System Architecture
+
+The diagram below shows the complete Make automation workflow, including Telegram lead intake, AI-powered data extraction, request validation, HubSpot CRM integration, duplicate deal detection, property matching, and customer responses.
+
+![AI Real Estate Automation — Make Scenario Architecture](github_architecture_en.png)
+
+**View the detailed architecture:**
+- [English — PNG](github_architecture_en.png)
+- [English — SVG (scalable diagram)](github_architecture_en.svg)
+- [Russian — SVG (scalable diagram)](github_architecture_ru.svg)
+- [Russian — PNG](github_architecture_ru.png)
+
+The diagram reflects the implemented Telegram-based workflow. Email and website integrations are not included in this version.
+
 ## 1. Project Overview
 
 This project demonstrates an AI-powered automation workflow for a real estate agency.
