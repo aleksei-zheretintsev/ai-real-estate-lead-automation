@@ -17,8 +17,8 @@ The diagram below shows the complete Make automation workflow, including Telegra
 **View the detailed architecture:**
 - [English — PNG](github_architecture_en.png)
 - [English — SVG (scalable diagram)](github_architecture_en.svg)
-- [Russian — SVG (scalable diagram)](github_architecture_ru.svg)
 - [Russian — PNG](github_architecture_ru.png)
+- [Russian — SVG (scalable diagram)](github_architecture_ru.svg)
 
 The diagram reflects the implemented Telegram-based workflow. Email and website integrations are not included in this version.
 
