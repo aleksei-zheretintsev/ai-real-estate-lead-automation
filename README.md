@@ -248,6 +248,50 @@ The portfolio documentation can include:
 
 **Security note:** API keys, access tokens, webhook URLs, connection details, and personal customer information must not be published.
 
+## 13. Test Evidence
+
+The automation was tested using synthetic customer data and a demonstration property catalog. Four test scenarios confirm the main workflow functions.
+
+### Test 1 — New Lead and Deal Creation
+
+**Scenario:** Daniel Brown requests a three-bedroom house in Encarnacion with a maximum budget of $150,000.
+
+**Result:** The workflow processes the request, creates or updates the HubSpot contact, creates a new deal, searches the property catalog, and recommends property RE-001 ($145,000) through Telegram.
+
+![New lead — Telegram](screenshots/01.1_new_lead_telegram.png)
+
+[View the new HubSpot deal](screenshots/01.2_new_deal_hubspot.png)
+
+### Test 2 — Duplicate Deal Detection and Budget Update
+
+**Scenario:** Michael Green submits an updated request for a one-bedroom apartment in Asuncion with a maximum budget of $105,000.
+
+**Result:** The workflow matches the existing deal, updates its maximum budget, searches the property catalog again, and recommends property RE-013 ($73,000).
+
+![Updated request — Telegram](screenshots/02.1_duplicate_updated_telegram.png)
+
+- [Updated HubSpot deal](screenshots/02.2_duplicate_updated_hubspot.png)
+- [Budget update history — Make integration](screenshots/02.3_hubspot_budget_update_history.png)
+- [Original deal creation history](screenshots/02.4_hubspot_deal_creation_history.png)
+
+### Test 3 — Incomplete Request Handling
+
+**Scenario:** A customer requests an apartment in Asuncion without providing all required details.
+
+**Result:** The workflow identifies missing information and asks clarifying questions before proceeding with CRM operations.
+
+![Incomplete request — Telegram](screenshots/03_incomplete_request_telegram.png)
+
+### Test 4 — Off-Topic Request Handling
+
+**Scenario:** A customer asks how to cook pasta.
+
+**Result:** The workflow recognizes the unrelated request and explains that the assistant specializes in real estate inquiries.
+
+![Off-topic request — Telegram](screenshots/04_off_topic_request_telegram.png)
+
+**Testing notes:** All customer information and property listings are synthetic demonstration data. These tests cover the Telegram-based workflow; email and website channels are not included in this version.
+
 ---
 
 **Project Summary**
