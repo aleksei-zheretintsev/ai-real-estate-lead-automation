@@ -292,6 +292,63 @@ The automation was tested using synthetic customer data and a demonstration prop
 
 **Testing notes:** All customer information and property listings are synthetic demonstration data. These tests cover the Telegram-based workflow; email and website channels are not included in this version.
 
+## 14. How to Test the Workflow
+
+The workflow was tested using synthetic customer data and a demonstration property catalog.
+
+The following test cases can be reproduced when the Make scenario and Telegram bot are running and the required integrations are connected.
+
+### Test 1 — New Lead and Deal Creation
+
+Send the following message to the Telegram bot:
+
+> Hello, my name is Daniel Brown. I want to buy a 3-bedroom house in Encarnacion. My maximum budget is $150,000. My email is daniel.brown@example.com.
+
+**Expected results:**
+- The AI extracts the customer's requirements.
+- HubSpot creates or updates the contact.
+- A new deal is created and associated with the contact if no matching deal exists.
+- The workflow searches the property catalog.
+- The Telegram bot returns matching property recommendations.
+
+### Test 2 — Duplicate Deal and Budget Update
+
+Submit a property request for an existing customer and the same transaction type, property type, city, and number of bedrooms, but with an updated maximum budget.
+
+**Expected results:**
+- The workflow identifies the existing deal.
+- The maximum budget is updated instead of creating a duplicate deal.
+- HubSpot records the property change.
+- The Telegram bot returns recommendations based on the updated budget.
+
+### Test 3 — Incomplete Request
+
+Send the following message:
+
+> Hello, I'm looking for an apartment in Asuncion.
+
+**Expected results:**
+- The workflow detects missing required information.
+- The Telegram bot asks the customer for additional details.
+- The incomplete request does not proceed to deal creation.
+
+### Test 4 — Off-Topic Request
+
+Send the following message:
+
+> How do I cook pasta?
+
+**Expected results:**
+- The workflow identifies the message as unrelated to real estate.
+- The Telegram bot explains its purpose and redirects the conversation toward property inquiries.
+- No deal is created for the off-topic request.
+
+### Test Evidence
+
+Screenshots of the completed test cases and corresponding HubSpot records are available in Section 13 — Test Evidence.
+
+**Important:** This is a portfolio demonstration using synthetic data. Live testing requires an active Make scenario, a configured Telegram bot, and authorized access to the connected services.
+
 ---
 
 **Project Summary**
