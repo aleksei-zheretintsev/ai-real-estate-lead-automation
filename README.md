@@ -22,6 +22,14 @@ The diagram below shows the complete Make automation workflow, including Telegra
 
 The diagram reflects the implemented Telegram-based workflow. Email and website integrations are not included in this version.
 
+### Live Make Scenario
+
+View the automation architecture on Make:
+
+[Open the public Make scenario](https://us2.make.com/public/shared-scenario/Z21bQGja9Nk/04-ai-real-estate-lead-crm)
+
+The public page provides a visual overview of the workflow, including its modules and routing logic. It does not provide access to the live automation, connected accounts, or execution credentials.
+
 ## 1. Project Overview
 
 This project demonstrates an AI-powered automation workflow for a real estate agency.
