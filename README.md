@@ -357,6 +357,45 @@ Screenshots of the completed test cases and corresponding HubSpot records are av
 
 **Important:** This is a portfolio demonstration using synthetic data. Live testing requires an active Make scenario, a configured Telegram bot, and authorized access to the connected services.
 
+## 15. Portfolio Demonstration Guide
+
+This guide provides a quick way to review the AI Real Estate Lead Qualification & CRM Automation project.
+
+### Step 1 — Review the Architecture
+
+Start with the system architecture diagram at the top of this README.
+
+The diagram illustrates the complete Telegram-based workflow, including AI-powered data extraction, request validation, HubSpot CRM integration, duplicate deal detection, property matching, and automated customer responses.
+
+### Step 2 — Explore the Make Scenario
+
+Open the **Live Make Scenario** link near the beginning of this README.
+
+The public Make page displays the workflow structure, modules, and routing logic. It is intended for visual inspection and does not provide access to connected accounts or live execution.
+
+### Step 3 — Review the Test Evidence
+
+Navigate to **Section 13 — Test Evidence** to examine four documented test cases:
+
+1. **New Lead and Deal Creation** — A customer request creates CRM records and returns a matching property.
+2. **Duplicate Deal Detection and Budget Update** — An existing deal is updated instead of creating a duplicate.
+3. **Incomplete Request Handling** — The assistant asks for missing customer information.
+4. **Off-Topic Request Handling** — The assistant responds appropriately to a request outside the real estate domain.
+
+The screenshots demonstrate Telegram responses and, where applicable, corresponding HubSpot CRM records and property history.
+
+### Step 4 — Review the Testing Instructions
+
+See **Section 14 — How to Test the Workflow** for example customer messages and expected behavior.
+
+Reproducing the tests requires an operational Make scenario, a connected Telegram bot, and the necessary integrations.
+
+### Project Scope
+
+This is an independent Proof of Concept (PoC) built with synthetic customer information and a demonstration property catalog.
+
+The implemented communication channel is Telegram. Email and website integrations are outside the scope of this version.
+
 ---
 
 **Project Summary**
